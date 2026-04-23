@@ -25,7 +25,7 @@ xargs -r flatpack remove -y --noninteractive com.mattjakeman.ExtensionManager
 rm -rf /usr/share/gnome-shell/extensions ~/.local/share/gnome-shell/extensions
 
 # this removes dnf packages
-dnf5 remove -y hhd hhd-ui webapp-manager firewall-config btrfs-assistant lutris rom-properties
+dnf5 remove -y hhd hhd-ui webapp-manager firewall-config btrfs-assistant lutris rom-properties distrobox
 
 #  this removes application icons
 rm -rf /usr/share/applications/hhd-ui /usr/share/applications/hhd-ui.desktop /usr/share/applications/btrf-assistant.desktop /usr/share/applications/com.gerbilsoft.rom-properties.rp-config.desktop

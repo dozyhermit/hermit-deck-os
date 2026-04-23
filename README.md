@@ -17,6 +17,7 @@ Minification, simplification. Bazzite does a lot of things right, but also inclu
 5. GUIs for things like `brew` or `btrfs`
 6. GNOME desktop environment applets and extensions
 7. Android emulation
+8. Virtualisation and container management
 
 ... which I don't use and haven't for a very long time.
 
@@ -41,6 +42,7 @@ The application changes are as follows:
 5. Removing flatpaks: `ProtonTricks`, `ProtonPlus` and the many GNOME applets
 6. Removing GUI application helpers for: `brew`, `btrfs`, `hhd` and the firewall
 7. Removing GNOME extensions and the extension manager
+8. Removing `distrobox`
 
 ### ujust
 
