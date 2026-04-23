@@ -13,13 +13,22 @@ set -ouex pipefail
 # dnf5 install -y tmux 
 
 # this installs/removes a package from flatpak repos
-xargs -r flatpak remove -y --noninteractive app/com.github.Matoking.protontricks/x86_64/stable app/com.ranfdev.DistroShelf/x86_64/stable app/com.github.tchx84.Flatseal/x86_64/stable app/io.github.flattool.Warehouse/x86_64/stable app/com.vysp3r.ProtonPlus/x86_64/stable app/org.gnome.Calculator/x86_64/stable app/org.gnome.Calendar/x86_64/stable app/org.gnome.Characters/x86_64/stable app/org.gnome.Contacts/x86_64/stable app/org.gnome.Papers/x86_64/stable app/org.gnome.Loupe/x86_64/stable app/org.gnome.NautilusPreviewer/x86_64/stable app/org.gnome.TextEditor/x86_64/stable app/org.gnome.Weather/x86_64/stable app/org.gnome.baobab/x86_64/stable app/org.gnome.clocks/x86_64/stable app/org.gnome.font-viewer/x86_64/stable app/org.gnome.Showtime/x86_64/stable app/org.altlinux.Tuner/x86_64/stable app/com.github.Matoking.protontricks/x86_64/stable runtime/com.obsproject.Studio.Plugin.OBSVkCapture/x86_64/stable runtime/com.obsproject.Studio.Plugin.Gstreamer/x86_64/stable runtime/com.obsproject.Studio.Plugin.GStreamerVaapi/x86_64/stable runtime/org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/25.08 runtime/org.freedesktop.Platform.VulkanLayer.vkBasalt/x86_64/25.08 runtime/org.freedesktop.Platform.VulkanLayer.OBSVkCapture/x86_64/25.08
+xargs -r flatpak remove -y --noninteractive app/com.github.Matoking.protontricks/x86_64/stable app/com.ranfdev.DistroShelf/x86_64/stable app/com.github.tchx84.Flatseal/x86_64/stable app/io.github.flattool.Warehouse/x86_64/stable app/com.vysp3r.ProtonPlus/x86_64/stable app/org.gnome.Calculator/x86_64/stable app/org.gnome.Calendar/x86_64/stable app/org.gnome.Characters/x86_64/stable app/org.gnome.Contacts/x86_64/stable app/org.gnome.Papers/x86_64/stable app/org.gnome.Loupe/x86_64/stable app/org.gnome.TextEditor/x86_64/stable app/org.gnome.Weather/x86_64/stable app/org.gnome.baobab/x86_64/stable app/org.gnome.clocks/x86_64/stable app/org.gnome.font-viewer/x86_64/stable app/org.gnome.Showtime/x86_64/stable app/org.altlinux.Tuner/x86_64/stable app/com.github.Matoking.protontricks/x86_64/stable runtime/com.obsproject.Studio.Plugin.OBSVkCapture/x86_64/stable runtime/com.obsproject.Studio.Plugin.Gstreamer/x86_64/stable runtime/com.obsproject.Studio.Plugin.GStreamerVaapi/x86_64/stable runtime/org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/25.08 runtime/org.freedesktop.Platform.VulkanLayer.vkBasalt/x86_64/25.08 runtime/org.freedesktop.Platform.VulkanLayer.OBSVkCapture/x86_64/25.08
+
+# removing baked in applications
+dnf5 remove -y hhd hhd-ui webapp-manager firewall-config btrfs-assistant lutris rom-properties
+
+# removing baked in applications icons 
+rm -rf /usr/share/applications/hhd-ui /usr/share/applications/hhd-ui.desktop /usr/share/applications/btrf-assistant.desktop /usr/share/applications/com.gerbilsoft.rom-properties.rp-config.desktop
+
+# removing bbrew-helper
+rm -rf /usr/share/applications/bbrew.desktop /usr/bin/bbrew-helper /usr/sbin/bbrew-helper
 
 # removing waydroid
 xargs -r waydroid session stop
 xargs -r waydroid container stop
 dnf5 remove -y waydroid
-rm -rf /var/lib/waydroid /home/.waydroid ~/waydroid ~/.share/waydroid ~/.local/share/applications/*aydroid* ~/.local/share/waydroid 
+rm -rf /var/lib/waydroid /home/.waydroid ~/waydroid ~/.share/waydroid ~/.local/share/applications/*aydroid* ~/.local/share/waydroid /usr/share/applications/Waydroind /usr/share/applications/*aydroid* /usr/libexec/*aydroid*
 
 # setup scripts using ujust
 xargs -r ujust setup-sunshine
@@ -33,5 +42,4 @@ xargs -r ujust setup-decky
 # dnf5 -y copr disable ublue-os/staging
 
 #### Example for enabling a System Unit File
-
 # systemctl enable podman.socket
