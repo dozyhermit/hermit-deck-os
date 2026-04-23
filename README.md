@@ -45,7 +45,7 @@ The applications removed are:
 
 ### ujust
 
-Reference: https://docs.bazzite.gg/Installing_and_Managing_Software/ujust/_
+_Reference: https://docs.bazzite.gg/Installing_and_Managing_Software/ujust/_
 
 The following `ujust` commands are run by default:
 
@@ -54,7 +54,7 @@ The following `ujust` commands are run by default:
 
 ## Installation
 
-Download `bazzite-gnome-deck` and install it: https://bazzite.gg.
+Download `bazzite-deck-gnome` and install it: https://bazzite.gg.
 
 Open a terminal and execute: `sudo bootc switch ghcr.io/dozyhermit/hermit-deck-os`.
 
