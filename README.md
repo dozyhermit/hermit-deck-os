@@ -1,43 +1,61 @@
 # hermit-deck-os
 
+![image description](./logo.png)
+
+_source: https://www.flaticon.com/authors/ains_
+
 Bazzite is great, but they target such a wide user base that I find it to be quite bloated.
 
-So, `hermit-deck-os` is a custom bootc image forked from `bazzite-deck-gnome` which strips out a lot of unnecessary (imo) things.
+`hermit-deck-os` is a custom `bazzite-deck-gnome` bootc image designed to strip unnecessary (imo) bloat.
 
 ## Ethos
 
-The target here is me, a desktop user with _some_ Linux experience. And while Bazzite offers a lot of pre-applied things that I have no patience to setup on my own, the rest is far from useful for me.
+Minification, simplification. Bazzite does a lot of things right, but also includes a lot of things like:
 
-So, the reasons I have removed something are:
+1. ROM emulations
+2. Handheld device support
+3. Game launchers
+4. Proton tweaking toolsets
+5. GUI helpers for things like `brew`, `Proton` or `btrfs`
+6. Gnome desktop environment applets and extensions
+7. Android emulation with Waydroid
 
-1. I don't use ROMs
-2. I don't use a handheld device
-3. I only use Steam, I don't use other launchers
-4. I connect to this system with software like Steam Link or Moonlight
-5. I don't configure or interact with Proton outside of Steam
-6. I am familiar enough with Linux that I don't need GUI helpers
-7. I do not do any software development on this system
+... which I don't use and haven't for a very long time.
 
-## Removals:
+So, `hermit-deck-os` aims to focus on:
 
-Removals are as follows:
+1. Steam, for playing games and managing `Proton`
+2. Steam and `decky` for hardware monitoring
+3. Steam Link and `sunshine`/`moonlight` for remote access
+
+That's it.
+
+## Changes:
+
+### Applications
+
+The applications removed are:
 
 1. `waydroid`
-2. Numerous flatpaks including: `ProtonTricks`, `ProtonPlus` and many Gnome applications
-3. `lutris`
-4. `hhd`
-5. `rom-properties`
-6. GUI applications like: `bbrew`, `btrfs-assistant`, `hhd-ui`
+2. `lutris`
+3. `hhd`
+4. `rom-properties`
+5. Numerous flatpaks like: `ProtonTricks`, `ProtonPlus` and the many Gnome applets
+6. GUI applications like: `bbrew`, `btrfs-assistant`, `hhd-ui` and `firewall-config`
 
-## Setups:
+### ujust
 
-Automated `ujust` setups:
+Reference: https://docs.bazzite.gg/Installing_and_Managing_Software/ujust/_
 
-1. Sunshine
-2. Decky
+The following `ujust` commands are run by default:
+
+1. `setup-sunshine`
+2. `setup-decky`
 
 ## Installation
 
-Download the ISO.
+Download `bazzite-gnome-deck` and install it: https://bazzite.gg.
 
-If you're already running Bazzite/Universal Blue, run: `sudo bootc switch ghcr.io/dozyhermit/hermit-deck-os`
+Open a terminal and execute: `sudo bootc switch ghcr.io/dozyhermit/hermit-deck-os`.
+
+Done!
