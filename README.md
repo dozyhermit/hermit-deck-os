@@ -11,7 +11,7 @@ So `hermit-deck-os` is a custom `bazzite-deck-gnome` bootc image designed to str
 Minification, simplification. Bazzite does a lot of things right, but also includes a lot of:
 
 1. ROM emulators
-2. Handheld supports
+2. Handheld device supports
 3. Game launchers
 4. Proton toolsets
 5. GUIs for things like `brew` or `btrfs`
@@ -19,7 +19,7 @@ Minification, simplification. Bazzite does a lot of things right, but also inclu
 7. Android emulation
 8. Virtualisation and container management
 
-... which I don't use and haven't for a very long time.
+... which I feel the average user _likely_ does not use.
 
 So, `hermit-deck-os` aims to focus on:
 
@@ -39,10 +39,12 @@ The application changes are as follows:
 2. Removing `lutris`
 3. Removing `hhd`
 4. Removing `rom-properties`
-5. Removing flatpaks: `ProtonTricks`, `ProtonPlus` and the many GNOME applets
-6. Removing GUI application helpers for: `brew`, `btrfs`, `hhd` and the firewall
-7. Removing GNOME extensions and the extension manager
-8. Removing `distrobox`
+5. Removing `distrobox`
+6. Removing `tailscale`
+7. Removing `webapp-manager`
+8. Removing flatpaks: `ProtonTricks`, `ProtonPlus` and the many GNOME applets
+9. Removing GUI application helpers for things like: `brew`, `btrfs`, `hhd` and the firewall
+10. Removing GNOME extensions and the extension manager
 
 ### ujust
 
