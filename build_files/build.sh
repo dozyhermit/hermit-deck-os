@@ -69,4 +69,4 @@ rm -rf  /usr/share/applications/btrf-assistant.desktop /usr/share/applications/c
 # this runs ujust scripts
 xargs -r ujust setup-sunshine
 xargs -r ujust setup-decky
-xargs -r ujust clean-system
+xargs -r ujust --yes clean-system
