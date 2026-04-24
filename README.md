@@ -54,6 +54,7 @@ The following `ujust` commands are run:
 
 1. `setup-sunshine`
 2. `setup-decky`
+3. `clean-system`
 
 ## Installation
 
