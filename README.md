@@ -20,16 +20,9 @@ Minification, simplification. `hermit-deck-os` focuses on:
 
 The application changes are as follows:
 
-1. Removing `waydroid`
-2. Removing `lutris`
-3. Removing `hhd`
-4. Removing `rom-properties`
-5. Removing `distrobox`
-6. Removing `tailscale`
-7. Removing `webapp-manager`
-8. Removing flatpaks: `ProtonTricks`, `ProtonPlus` and the many GNOME applets
-9. Removing GUI application helpers for things like: `brew`, `btrfs` and `hhd`
-10. Removing GNOME extensions and the extension manager
+1. Removing system packages: `waydroid`, `lutris`, `hhd`, `rom-properties`, `distrobox`, `tailscale` and `webapp-manager`
+2. Removing flatpaks: `ProtonTricks`, `ProtonPlus` and the many GNOME applets
+4. Removing GNOME extensions and the extension manager
 
 ### ujust
 
