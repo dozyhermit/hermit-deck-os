@@ -18,7 +18,6 @@ xargs -r flatpak remove -y --noninteractive app/com.github.Matoking.protontricks
 # there's a bug with DistroShelf in that it may error when trying to uninstall, 
 # so i'm keeping it out of the above and attempting uninstall twice for posterity
 xargs -r flatpak remove -y --noninteractive app/com.ranfdev.DistroShelf/x86_64/stable
-xargs -r flatpak remove -y --noninteractive app/com.ranfdev.DistroShelf/x86_64/stable
 
 # this removes dnf packages
 dnf5 remove -y firewall-config btrfs-assistant lutris 
