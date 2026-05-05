@@ -52,13 +52,16 @@ rm -rf /var/lib/tailscale/tailscaled.state
 # this removes bbrew
 rm -rf /usr/share/applications/bbrew.desktop /usr/bin/bbrew-helper /usr/sbin/bbrew-helper
 
-## this removes the gnome extension manager and extensions
+# this removes the gnome extension manager and extensions
 xargs -r gsettings set org.gnome.shell disable-user-extensions true
 xargs -r flatpack remove -y --noninteractive com.mattjakeman.ExtensionManager
 rm -rf /usr/share/gnome-shell/extensions ~/.local/share/gnome-shell/extensions
 
-#  this removes application icons if they're left over
+# this removes application icons if they're left over
 rm -rf  /usr/share/applications/btrf-assistant.desktop /usr/share/applications/com.gerbilsoft.rom-properties.rp-config.desktop
+
+# this sets the system hostname
+hostnamectl set-hostname "HERMIT-DECK-OS"
 
 ### Scripts
 
