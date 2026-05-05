@@ -59,13 +59,3 @@ dnf5 clean all
 # example: systemctl enable docker.service
 
 # this runs a configuration
-
-### Scripts
-
-# this runs scripts created or added by bazzite or fedora silverblue
-# example: ujust setup tailscale
-
-# this runs ujust scripts
-ujust setup-sunshine
-ujust setup-decky
-ujust --yes clean-system
