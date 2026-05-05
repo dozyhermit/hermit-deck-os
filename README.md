@@ -21,18 +21,7 @@ Minification, simplification. `hermit-deck-os` focuses on:
 The application changes are as follows:
 
 1. Removing system packages: `waydroid`, `lutris`, `hhd`, `rom-properties`, `distrobox`, `tailscale` and `webapp-manager`
-2. Removing flatpaks: `ProtonTricks`, `ProtonPlus` and the many GNOME applets
-4. Removing GNOME extensions and the extension manager
-
-### ujust
-
-_Reference: https://docs.bazzite.gg/Installing_and_Managing_Software/ujust/_
-
-The following `ujust` commands are run:
-
-1. `setup-sunshine`
-2. `setup-decky`
-3. `clean-system`
+2. Removing GNOME extensions and the extension manager
 
 ## Installation
 
@@ -41,3 +30,21 @@ Download `bazzite-deck-gnome` and install it: https://bazzite.gg
 Open a terminal, execute: `sudo bootc switch ghcr.io/dozyhermit/hermit-deck-os`
 
 Done!
+
+### Post Installation
+
+#### ujust
+
+_Reference: https://docs.bazzite.gg/Installing_and_Managing_Software/ujust/_
+
+The following `ujust` commands should be run:
+
+1. `setup-sunshine`
+2. `setup-decky`
+3. `clean-system`
+
+#### Other
+
+See below for additional tasks, if required.
+
+Reference: https://codeberg.org/dozyhermit/post-install
