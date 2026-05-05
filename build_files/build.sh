@@ -12,20 +12,9 @@ set -ouex pipefail
 # this installs/removes packages from fedora repos or flatpak
 # example: dnf5 install -y tmux 
 
-# this removes flatpak packages
-flatpak -y --noninteractive uninstall com.github.Matoking.protontricks com.github.tchx84.Flatseal io.github.flattool.Warehouse com.vysp3r.ProtonPlus org.gnome.Calculator org.gnome.Calendar org.gnome.Characters org.gnome.Contacts org.gnome.Papers org.gnome.Loupe org.gnome.TextEditor org.gnome.Weather org.gnome.baobab org.gnome.clocks org.gnome.font-viewer org.gnome.Showtime org.altlinux.Tuner com.github.Matoking.protontricks com.obsproject.Studio.Plugin.OBSVkCapture com.obsproject.Studio.Plugin.Gstreamer com.obsproject.Studio.Plugin.GStreamerVaapi org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/25.08 org.freedesktop.Platform.VulkanLayer.vkBasalt/x86_64/25.08 org.freedesktop.Platform.VulkanLayer.OBSVkCapture/x86_64/25.08 io.missioncenter.MissionCenter
-
-# for some reason, Distroshelf sometimes doesn't uninstall correctly the first time
-flatpak -y --noninteractive uninstall com.ranfdev.DistroShelf
-flatpak -y --noninteractive uninstall com.ranfdev.DistroShelf
-
 # this removes gnome extension manager and extensions
 gsettings set org.gnome.shell disable-user-extensions true
-flatpack -y --noninteractive uninstall com.mattjakeman.ExtensionManager
 rm -rf /usr/share/gnome-shell/extensions ~/.local/share/gnome-shell/extensions
-
-# this cleans flatpak
-flatpak -y --noninteractive remove --unused
 
 # this removes dnf packages
 dnf5 remove -y firewall-config btrfs-assistant lutris 
