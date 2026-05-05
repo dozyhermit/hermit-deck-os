@@ -60,9 +60,6 @@ rm -rf /usr/share/gnome-shell/extensions ~/.local/share/gnome-shell/extensions
 # this removes application icons if they're left over
 rm -rf  /usr/share/applications/btrf-assistant.desktop /usr/share/applications/com.gerbilsoft.rom-properties.rp-config.desktop
 
-# this sets the system hostname
-hostnamectl set-hostname "HERMIT-DECK-OS"
-
 ### Scripts
 
 # this runs scripts created or added by bazzite or fedora silverblue
