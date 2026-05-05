@@ -37,8 +37,6 @@ rm -rf /etc/hhd
 rm -rf /usr/share/applications/hhd-ui /usr/share/applications/hhd-ui.desktop
 
 # this removes waydroid
-waydroid session stop
-waydroid container stop
 dnf5 remove -y waydroid
 rm -rf /var/lib/waydroid /home/.waydroid ~/waydroid ~/.share/waydroid ~/.local/share/applications/*aydroid* ~/.local/share/waydroid /usr/share/applications/Waydroind /usr/share/applications/*aydroid* /usr/libexec/*aydroid* /usr/lib/*aydroid*
 
