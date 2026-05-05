@@ -45,6 +45,6 @@ The following `ujust` commands should be run:
 
 #### Other
 
-See below for additional tasks, if required.
+_Reference: https://codeberg.org/dozyhermit/post-install_
 
-Reference: https://codeberg.org/dozyhermit/post-install
+See above for additional actions.
