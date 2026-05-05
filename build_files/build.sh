@@ -13,11 +13,11 @@ set -ouex pipefail
 # example: dnf5 install -y tmux 
 
 # this removes flatpak packages
-flatpak remove -y --noninteractive app/com.github.Matoking.protontricks/x86_64/stable app/com.github.tchx84.Flatseal/x86_64/stable app/io.github.flattool.Warehouse/x86_64/stable app/com.vysp3r.ProtonPlus/x86_64/stable app/org.gnome.Calculator/x86_64/stable app/org.gnome.Calendar/x86_64/stable app/org.gnome.Characters/x86_64/stable app/org.gnome.Contacts/x86_64/stable app/org.gnome.Papers/x86_64/stable app/org.gnome.Loupe/x86_64/stable app/org.gnome.TextEditor/x86_64/stable app/org.gnome.Weather/x86_64/stable app/org.gnome.baobab/x86_64/stable app/org.gnome.clocks/x86_64/stable app/org.gnome.font-viewer/x86_64/stable app/org.gnome.Showtime/x86_64/stable app/org.altlinux.Tuner/x86_64/stable app/com.github.Matoking.protontricks/x86_64/stable runtime/com.obsproject.Studio.Plugin.OBSVkCapture/x86_64/stable runtime/com.obsproject.Studio.Plugin.Gstreamer/x86_64/stable runtime/com.obsproject.Studio.Plugin.GStreamerVaapi/x86_64/stable runtime/org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/25.08 runtime/org.freedesktop.Platform.VulkanLayer.vkBasalt/x86_64/25.08 runtime/org.freedesktop.Platform.VulkanLayer.OBSVkCapture/x86_64/25.08 app/io.missioncenter.MissionCenter/x86_64/stable
+flatpak remove -y --noninteractive com.github.Matoking.protontricks com.github.tchx84.Flatseal io.github.flattool.Warehouse com.vysp3r.ProtonPlus org.gnome.Calculator org.gnome.Calendar org.gnome.Characters org.gnome.Contacts org.gnome.Papers org.gnome.Loupe org.gnome.TextEditor org.gnome.Weather org.gnome.baobab org.gnome.clocks org.gnome.font-viewer org.gnome.Showtime org.altlinux.Tuner com.github.Matoking.protontricks com.obsproject.Studio.Plugin.OBSVkCapture com.obsproject.Studio.Plugin.Gstreamer com.obsproject.Studio.Plugin.GStreamerVaapi org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/25.08 org.freedesktop.Platform.VulkanLayer.vkBasalt/x86_64/25.08 org.freedesktop.Platform.VulkanLayer.OBSVkCapture/x86_64/25.08 io.missioncenter.MissionCenter
 
 # for some reason, Distroshelf sometimes doesn't uninstall correctly the first time
-flatpak remove -y --noninteractive app/com.ranfdev.DistroShelf/x86_64/stable
-flatpak remove -y --noninteractive app/com.ranfdev.DistroShelf/x86_64/stable
+flatpak remove -y --noninteractive com.ranfdev.DistroShelf
+flatpak remove -y --noninteractive com.ranfdev.DistroShelf
 
 # this removes gnome extension manager and extensions
 gsettings set org.gnome.shell disable-user-extensions true
